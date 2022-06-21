@@ -10,6 +10,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {MatChipsModule} from "@angular/material/chips";
+import {MaterialModule} from "./material/material.module";
 
 @NgModule({
   declarations: [
@@ -21,10 +22,7 @@ import {MatChipsModule} from "@angular/material/chips";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatListModule,
-    MatIconModule,
-    MatChipsModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
