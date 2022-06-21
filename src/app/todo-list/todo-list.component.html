@@ -1,4 +1,9 @@
-<ul>
-  <li *ngFor="let item of todo; let i = index">({{i + 1}}) {{item}}</li>
-</ul>
+<mat-list role="list">
+  <mat-list-item
+    role="listitem"
+  *ngFor="let item of todo; let i = index">
+    <mat-icon aria-hidden="false" aria-label="Example task icon">task</mat-icon>
+    {{item}}
+  </mat-list-item>
+</mat-list>
 <p *ngIf="todo.length === 0">Everything done!</p>
