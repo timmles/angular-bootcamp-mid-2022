@@ -7,9 +7,7 @@
     <div class="col-12">
       <app-todo-list-summary [todo]="todoArr"></app-todo-list-summary>
       <todo-list [todo]="todoArr"></todo-list>
-
-      <input type="text" #todoInput (keydown.enter)="addTodo(todoInput)">
-      <button (click)="addTodo(todoInput)">Make coffee</button>
+      <app-generic-input (todoAdd)="todoAdd($event)"></app-generic-input>
     </div>
   </div>
 </div>

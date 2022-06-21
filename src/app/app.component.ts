@@ -12,8 +12,7 @@ export class AppComponent {
     "Be awesome"
   ]
 
-  addTodo(todoInput: HTMLInputElement) {
-    this.todoArr.push(todoInput.value)
-    todoInput.value = ''
+  todoAdd(todo: string) {
+    this.todoArr.push(todo)
   }
 }
