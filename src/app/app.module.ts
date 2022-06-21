@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TodoListComponent} from "./todo-list/todo-list.component";
+import { TodoListSummaryComponent } from './todo-list-summary/todo-list-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoListSummaryComponent
   ],
   imports: [
     BrowserModule,
