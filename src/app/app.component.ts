@@ -11,4 +11,9 @@ export class AppComponent {
     "Learn Angular",
     "Be awesome"
   ]
+
+  addTodo(todoInput: HTMLInputElement) {
+    this.todoArr.push(todoInput.value)
+    todoInput.value = ''
+  }
 }
