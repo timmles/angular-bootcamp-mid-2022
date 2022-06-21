@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-12">
       <app-todo-list-summary [todo]="todoArr"></app-todo-list-summary>
-      <todo-list [todo]="todoArr"></todo-list>
+      <todo-list [(todo)]="todoArr"></todo-list>
       <app-generic-input (todoAdd)="todoAdd($event)"></app-generic-input>
     </div>
   </div>

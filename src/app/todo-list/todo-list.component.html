@@ -4,6 +4,9 @@
   *ngFor="let item of todo; let i = index">
     <mat-icon aria-hidden="false" aria-label="Example task icon">task</mat-icon>
     {{item}}
+    <button mat-mini-fab color="primary" (click)="removeTodo(i)">
+      <mat-icon>remove</mat-icon>
+    </button>
   </mat-list-item>
 </mat-list>
 <p *ngIf="todo.length === 0">Everything done!</p>
