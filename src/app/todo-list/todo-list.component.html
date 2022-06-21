@@ -1,4 +1,4 @@
 <ul>
   <li *ngFor="let item of todo; let i = index">({{i + 1}}) {{item}}</li>
 </ul>
-<p *ngIf="todo.length === 3">Everything done!</p>
+<p *ngIf="todo.length === 0">Everything done!</p>
