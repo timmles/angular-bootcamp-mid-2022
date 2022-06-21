@@ -6,13 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  todo = [
+  todoArr = [
     "Learn Javascript",
     "Learn Angular",
     "Be awesome"
   ]
-
-  summary(): string {
-    return `Summary: 0 / ${this.todo.length}`
-  }
 }

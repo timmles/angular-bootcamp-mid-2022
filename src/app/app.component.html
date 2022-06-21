@@ -1,10 +1,2 @@
-<p>{{summary()}}</p>
-
-<app-todo-list-summary></app-todo-list-summary>
-
-<todo-list></todo-list>
-<ul>
-  <li *ngFor="let item of todo; let i = index">({{i + 1}}) {{item}}</li>
-</ul>
-
-<p *ngIf="todo.length === 3">Everything done!</p>
+<app-todo-list-summary [todo]="todoArr"></app-todo-list-summary>
+<todo-list [todo]="todoArr"></todo-list>
