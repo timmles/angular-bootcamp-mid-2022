@@ -1,2 +1,9 @@
-<input type="text" #todoInput (keydown.enter)="addTodo(todoInput)">
-<button (click)="addTodo(todoInput)">Make coffee</button>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Add new todo</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="" #todoInput (keydown.enter)="addTodo(todoInput)">
+  </mat-form-field>
+</form>
+<button mat-mini-fab color="primary" (click)="addTodo(todoInput)">
+  <mat-icon>add</mat-icon>
+</button>
