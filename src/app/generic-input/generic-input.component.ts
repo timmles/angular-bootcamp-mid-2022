@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {TodoServiceService} from "../todo-service.service";
 
 @Component({
   selector: 'app-generic-input',
@@ -7,11 +8,10 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class GenericInputComponent {
 
-  @Output()
-  todoAdd: EventEmitter<string> = new EventEmitter<string>()
-
+  constructor(private todoService: TodoServiceService) {
+  }
   addTodo(todoInput: HTMLInputElement) {
-    this.todoAdd.emit(todoInput.value)
+    this.todoService.addTodo(todoInput.value)
     todoInput.value = ''
   }
 

@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
+import {TodoServiceService} from "../todo-service.service";
 
 @Component({
   selector: 'todo-list',
@@ -7,14 +8,13 @@ import {Component, EventEmitter, Input, Output} from "@angular/core";
 })
 export class TodoListComponent {
 
-  @Input()
-  todo:string[] = []
-  @Output()
-  todoChange: EventEmitter<string[]> = new EventEmitter<string[]>()
+  todo:string[] = this.todoService.getTodo()
+
+  constructor(private todoService: TodoServiceService) {
+  }
 
   removeTodo(index: number) {
-    let newArr = this.todo.filter((value, idx) => {return index !== idx})
-
-    this.todoChange.emit(newArr)
+    this.todoService.removeTodo(index)
+    // this.todo = this.todoService.getTodo()
   }
 }
