@@ -13,10 +13,12 @@ export class TodoServiceService {
     "Be awesome"
   ]
 
+  url = 'https://jsonplaceholder.typicode.com/todos';
+
   constructor(private http: HttpClient) {}
 
   getTodo(): Observable<Todo[]> {
-    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos');
+    return this.http.get<Todo[]>(this.url);
   }
 
   addTodo(todo: string) {
