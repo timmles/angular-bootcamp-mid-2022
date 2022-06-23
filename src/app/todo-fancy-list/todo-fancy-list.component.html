@@ -1,15 +1,11 @@
-<router-outlet></router-outlet>
-
 <mat-list role="list">
   <mat-list-item
     role="listitem"
   *ngFor="let item of todo | async; let i = index">
     <mat-icon aria-hidden="false" aria-label="Example task icon">task</mat-icon>
-
-    <a [routerLink]="[item.id]" [routerLinkActive]="'active'">{{item.title}}</a>
+    {{item.title}}
     <button mat-mini-fab color="primary" (click)="removeTodo(i)">
       <mat-icon>remove</mat-icon>
     </button>
   </mat-list-item>
 </mat-list>
-<!--<p *ngIf="todo.length === 0">Everything done!</p>-->

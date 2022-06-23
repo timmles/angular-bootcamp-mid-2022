@@ -13,13 +13,19 @@ import {MatChipsModule} from "@angular/material/chips";
 import {MaterialModule} from "./material/material.module";
 import { GenericInputComponent } from './generic-input/generic-input.component';
 import {HttpClientModule} from "@angular/common/http";
+import {TodoFancyListComponent} from "./todo-fancy-list/todo-fancy-list.component";
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     TodoListSummaryComponent,
-    GenericInputComponent
+    GenericInputComponent,
+    TodoFancyListComponent,
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,

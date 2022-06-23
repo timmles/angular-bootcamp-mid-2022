@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Todo} from "./models/todo.model";
@@ -15,7 +15,8 @@ export class TodoServiceService {
 
   url = 'https://jsonplaceholder.typicode.com/todos';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   getTodo(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.url);
@@ -29,5 +30,9 @@ export class TodoServiceService {
     if (index > -1) {
       this.todoArr.splice(index, 1);
     }
+  }
+
+  getSingleTodo(id: number): Observable<Todo> {
+    return this.http.get<Todo>(`${this.url}/${id}`);
   }
 }

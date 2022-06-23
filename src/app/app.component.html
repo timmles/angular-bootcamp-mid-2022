@@ -5,8 +5,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <a [routerLink]="['/todo']" [routerLinkActive]="'active'">Todo</a>
+      <a [routerLink]="['/fancy']" [routerLinkActive]="'active'">Fancy</a>
       <app-todo-list-summary [todo]="[]"></app-todo-list-summary>
-      <todo-list></todo-list>
+      <router-outlet></router-outlet>
       <app-generic-input></app-generic-input>
     </div>
   </div>
