@@ -21,8 +21,8 @@ export class TodoServiceService {
     return this.http.get<Todo[]>(this.url);
   }
 
-  addTodo(todo: string) {
-    this.todoArr.push(todo)
+  addTodo(todo: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.url, todo);
   }
 
   removeTodo(index: number) {

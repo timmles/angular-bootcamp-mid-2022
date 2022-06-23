@@ -11,7 +11,7 @@ export class GenericInputComponent {
   constructor(private todoService: TodoServiceService) {
   }
   addTodo(todoInput: HTMLInputElement) {
-    this.todoService.addTodo(todoInput.value)
+    this.todoService.addTodo({ title: todoInput.value, id: 0, userId: 0, completed: false})
     todoInput.value = ''
   }
 
